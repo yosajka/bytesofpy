@@ -6,7 +6,7 @@ from urllib.request import urlretrieve
 STATS = path.join('/tmp', 'testfiles_number_loc.txt')
 if not path.isfile(STATS):
     urlretrieve('https://bit.ly/2Jp5CUt', STATS)
-print(STATS)
+
 STATS_OUTPUT = """
 Basic statistics:
 - count     : {count:7d}
