@@ -7,7 +7,7 @@ urllib.request.urlretrieve('http://bit.ly/2BLsCYc', LOG)
 
 
 def create_chart():
-    with open('safari.logs', 'r') as logfile:
+    with open(LOG, 'r') as logfile:
         content = logfile.read().split('\n')   
     date = list(set([text[:5] for text in content if text[:5] != '']))
     date = sorted(date, key=lambda x: int(x[3:5]))    
@@ -21,5 +21,6 @@ def create_chart():
                     pybook = pybook + '.'
         if pybook != '':
             print(days + ' ', end='')            
-            print(pybook)            
-       
+            print(pybook)
+                        
+create_chart()            
